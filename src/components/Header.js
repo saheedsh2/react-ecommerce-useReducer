@@ -2,8 +2,15 @@ import React from 'react';
 import { Navbar, Container, FormControl, Nav, Badge, Dropdown } from 'react-bootstrap'
 import { FaShoppingCart } from 'react-icons/fa';
 import { Link } from 'react-router-dom'
+import { CartState } from '../context/Context';
 
 const Header = () => {
+
+    const { 
+        state: { cart }
+    } = CartState()
+
+
   return (
     <Navbar bg='dark' variant='dark' style={{ height: 80 }}>
         <Container>
@@ -17,7 +24,7 @@ const Header = () => {
                 <Dropdown alignright='true'>
                     <Dropdown.Toggle variant='success'>
                         <FaShoppingCart color='white' fontSize='25px' />
-                        <Badge>{10}</Badge>
+                        <Badge>{cart.length}</Badge>
 
                     </Dropdown.Toggle>
                     <Dropdown.Menu style={{ minWidth: 370 }}>
