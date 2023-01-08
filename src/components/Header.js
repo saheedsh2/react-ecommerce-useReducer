@@ -18,7 +18,8 @@ import { CartState } from "../context/Context";
 const Header = () => {
   const {
     state: { cart },
-    dispatch
+    dispatch,
+    productDispatch,
   } = CartState();
 
   return (
@@ -28,7 +29,7 @@ const Header = () => {
           <Link to="/">Shoppin Cart</Link>
         </Navbar.Brand>
         <Nav>
-          <Dropdown alignRight>
+          <Dropdown>
             <Dropdown.Toggle variant="success" align="end">
               <FaShoppingCart color="white" fontSize="25px" />
               <Badge bg='none'>{cart.length}</Badge>
@@ -80,6 +81,10 @@ const Header = () => {
             syle={{ width: 300 }}
             placeholder="Search"
             className="m-auto"
+            onChange={(e) => {
+              productDispatch({type: "FILTER_BY_SEARCH",
+            payload: e.target.value})
+            }}
           />
         </Navbar.Text>
    
