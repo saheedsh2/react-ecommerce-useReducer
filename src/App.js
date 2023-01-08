@@ -11,7 +11,7 @@ function App() {
           <div>
             <Route path='/' component={Home} exact />
           
-            <Route path='/cart' component={Cart} />
+            <Route path='/cart' component={Cart} exact/>
            
           </div>
     </BrowserRouter>
