@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-ecommerce-useReducer/static/css/main.2e6d9cee.css",
+    "main.js": "/react-ecommerce-useReducer/static/js/main.3d196eb7.js",
+    "index.html": "/react-ecommerce-useReducer/index.html",
+    "main.2e6d9cee.css.map": "/react-ecommerce-useReducer/static/css/main.2e6d9cee.css.map",
+    "main.3d196eb7.js.map": "/react-ecommerce-useReducer/static/js/main.3d196eb7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2e6d9cee.css",
+    "static/js/main.3d196eb7.js"
+  ]
+}
